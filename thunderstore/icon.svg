@@ -1,10 +1,51 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
-  <rect width="256" height="256" rx="40" fill="#1f2430"/>
-  <g fill="#c9b48a">
-    <circle cx="84" cy="96" r="26"/><path d="M38 186c0-30 20-50 46-50s46 20 46 50z"/>
-    <circle cx="150" cy="84" r="22" opacity=".7"/><path d="M112 160c4-24 20-40 38-40s38 16 40 40z" opacity=".7"/>
+  <defs>
+    <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4a4540"/>
+      <stop offset="1" stop-color="#1f1c19"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0" stop-color="#e0a346" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#e0a346" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe08a"/>
+      <stop offset="1" stop-color="#c8862e"/>
+    </linearGradient>
+    <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b2f25"/>
+      <stop offset="1" stop-color="#231b15"/>
+    </linearGradient>
+    <linearGradient id="badge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d8452c"/>
+      <stop offset="1" stop-color="#8f2415"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Chiselled stone tile -->
+  <rect x="0" y="0" width="256" height="256" rx="36" fill="#15130f"/>
+  <rect x="8" y="8" width="240" height="240" rx="30" fill="url(#stone)"/>
+  <path d="M8 90 L70 78 L120 96 L180 80 L248 92 M8 176 L60 168 L110 184 L190 170 L248 180 M70 78 L64 8 M180 80 L186 8 M110 184 L104 248 M190 170 L196 248"
+        stroke="#15130f" stroke-opacity="0.45" stroke-width="3" fill="none"/>
+  <rect x="8" y="8" width="240" height="240" rx="30" fill="url(#glow)"/>
+  <rect x="8" y="8" width="240" height="240" rx="30" fill="none" stroke="#6b6158" stroke-width="3"/>
+
+  <!-- Party, back row first -->
+  <g stroke-width="5" stroke-linejoin="round" fill="url(#fill)">
+    <g stroke="#8a6230">
+      <circle cx="70" cy="92" r="20"/>
+      <path d="M34 166 C34 136 50 120 70 120 C90 120 106 136 106 166 Z"/>
+      <circle cx="186" cy="92" r="20"/>
+      <path d="M150 166 C150 136 166 120 186 120 C206 120 222 136 222 166 Z"/>
+    </g>
+    <g stroke="url(#gold)" stroke-width="6">
+      <circle cx="128" cy="84" r="28"/>
+      <path d="M76 196 C76 152 100 128 128 128 C156 128 180 152 180 196 Z"/>
+    </g>
   </g>
-  <g fill="#7fd18b">
-    <rect x="170" y="150" width="56" height="16" rx="8"/><rect x="190" y="130" width="16" height="56" rx="8"/>
-  </g>
+
+  <!-- Player count badge -->
+  <circle cx="190" cy="192" r="36" fill="#15130f"/>
+  <circle cx="190" cy="192" r="31" fill="url(#badge)" stroke="url(#gold)" stroke-width="5"/>
+  <text x="190" y="208" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="bold" font-size="46" fill="#fff4dc">8</text>
 </svg>
