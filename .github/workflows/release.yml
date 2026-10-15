@@ -55,7 +55,7 @@ jobs:
       - name: Publish to Thunderstore
         env:
           THUNDERSTORE_TOKEN: ${{ secrets.THUNDERSTORE_TOKEN }}
-        run: scripts/thunderstore-publish.sh "dist/darkharasho-MorePlayers-$VERSION.zip" --community stonewards
+        run: scripts/thunderstore-publish.sh "dist/darkharasho-MorePlayers-$VERSION.zip" --community stonewards --categories mods
 
       - uses: actions/upload-artifact@v4
         with:
