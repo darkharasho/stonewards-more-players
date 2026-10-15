@@ -1,6 +1,6 @@
 {
     "name": "MorePlayers",
-    "version_number": "0.1.0",
+    "version_number": "0.2.0",
     "website_url": "https://github.com/darkharasho/stonewards-more-players",
     "description": "Raises the multiplayer lobby cap above 4 players. Only the host needs it.",
     "dependencies": [
